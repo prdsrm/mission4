@@ -34,7 +34,7 @@
             <article class="indicateur">
                 <h4>Indicateur 1: Analyse des ventes par catégorie de produits</h4>
                 <p><strong>Énoncé et interprétation:</strong> Cet indicateur vise à déterminer la répartition des ventes par catégorie de produits, permettant d'identifier les catégories les plus performantes.</p>
-                <p><strong>Résultat:</strong> [Insérer ici un tableau ou une capture d'écran du résultat]</p>
+                <p><strong>Résultat:</strong> copier le tableau du Notion</p>
                 <p><strong>Code SQL généré:</strong></p>
                 <pre><code>
 SELECT Categorie.NomCateg, SUM(DetailCommande.QteCom * DetailCommande.PrixUnitCli) AS Ventes
@@ -49,7 +49,7 @@ ORDER BY Ventes DESC;
             <article class="indicateur">
                 <h4>Indicateur 2: Analyse des fournisseurs les plus actifs</h4>
                 <p><strong>Énoncé et interprétation:</strong> Cet indicateur permet d'identifier les fournisseurs dont les produits sont les plus commandés, aidant à optimiser la gestion des approvisionnements.</p>
-                <p><strong>Résultat:</strong> [Insérer ici un tableau ou une capture d'écran du résultat]</p>
+                <p><strong>Résultat:</strong> copier le tableau du Notion</p>
                 <p><strong>Code SQL généré:</strong></p>
                 <pre><code>
 SELECT Fournisseur.Societe, COUNT(DISTINCT DetailCommande.RefProd) AS NbProduitsCommandes
@@ -61,7 +61,7 @@ ORDER BY NbProduitsCommandes DESC;
                 </code></pre>
             </article>
 
-            <!-- Ajouter ici au moins 2 autres indicateurs suivant le même modèle -->
+            <!-- TODO: 2 autres indicateurs suivant le même modèle -->
 
         </section>
 
