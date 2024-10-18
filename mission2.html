@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Analyse KDOU - Mission 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rapport d'Analyse KDOU</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="mission1.html">Mission 1</a></li>
+                <li><a href="mission2.html" class="active">Mission 2</a></li>
+                <li><a href="mission3.html">Mission 3</a></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Mission 2: Exploitation BDD KDou avec une interface low code</h2>
+
+        <section id="contexte">
+            <h3>Contexte</h3>
+            <p>La deuxième mission visait à exploiter la base de données de KDOU en utilisant une interface low code. L'objectif était d'extraire des indicateurs pertinents pour l'analyse de l'activité de l'entreprise.</p>
+        </section>
+
+        <section id="indicateurs">
+            <h3>Présentation des indicateurs</h3>
+
+            <article class="indicateur">
+                <h4>Indicateur 1: Analyse des ventes par catégorie de produits</h4>
+                <p><strong>Énoncé et interprétation:</strong> Cet indicateur vise à déterminer la répartition des ventes par catégorie de produits, permettant d'identifier les catégories les plus performantes.</p>
+                <p><strong>Résultat:</strong> [Insérer ici un tableau ou une capture d'écran du résultat]</p>
+                <p><strong>Code SQL généré:</strong></p>
+                <pre><code>
+SELECT Categorie.NomCateg, SUM(DetailCommande.QteCom * DetailCommande.PrixUnitCli) AS Ventes
+FROM Categorie
+INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
+INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd
+GROUP BY Categorie.NomCateg
+ORDER BY Ventes DESC;
+                </code></pre>
+            </article>
+
+            <article class="indicateur">
+                <h4>Indicateur 2: Analyse des fournisseurs les plus actifs</h4>
+                <p><strong>Énoncé et interprétation:</strong> Cet indicateur permet d'identifier les fournisseurs dont les produits sont les plus commandés, aidant à optimiser la gestion des approvisionnements.</p>
+                <p><strong>Résultat:</strong> [Insérer ici un tableau ou une capture d'écran du résultat]</p>
+                <p><strong>Code SQL généré:</strong></p>
+                <pre><code>
+SELECT Fournisseur.Societe, COUNT(DISTINCT DetailCommande.RefProd) AS NbProduitsCommandes
+FROM Fournisseur
+INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
+INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd
+GROUP BY Fournisseur.Societe
+ORDER BY NbProduitsCommandes DESC;
+                </code></pre>
+            </article>
+
+            <!-- Ajouter ici au moins 2 autres indicateurs suivant le même modèle -->
+
+        </section>
+
+        <section id="conclusion">
+            <h3>Conclusion de la Mission 2</h3>
+            <p>L'exploitation de la base de données KDOU à l'aide d'une interface low code a permis de mettre en lumière plusieurs aspects importants de l'activité de l'entreprise. Les indicateurs analysés fournissent des informations précieuses sur les performances des catégories de produits, l'activité des fournisseurs, et d'autres aspects clés qui pourront guider les décisions stratégiques futures de KDOU.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Équipe d'Analyse KDOU. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
