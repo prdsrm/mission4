@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Analyse KDOU</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#mission1">Mission 1</a></li>
+            <li><a href="#mission2">Mission 2</a></li>
+            <li><a href="#mission3">Mission 3</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>Rapport d'Analyse KDOU</h1>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Ce rapport présente l'analyse des données de l'entreprise KDOU, réalisée en trois missions distinctes. Chaque mission a apporté des éclairages différents sur la structure des données, l'exploitation de la base de données, et l'analyse approfondie à l'aide de requêtes SQL.</p>
+        </section>
+
+        <section id="mission1">
+            <h2>Mission 1: Étude des Données</h2>
+            <div class="mission-summary">
+                <h3>Résumé de la Mission 1</h3>
+                <ul>
+                    <li>Identification de six tables principales: Fournisseur, Produit, Catégorie, Clientèle, Commande, et DetailCommande.</li>
+                    <li>Analyse des clés primaires et étrangères pour chaque table.</li>
+                    <li>Découverte de 3 clients nantais et 3 clients parisiens.</li>
+                    <li>Identification de 7 fournisseurs en Amérique du Nord.</li>
+                    <li>Repérage de 7 pays de l'UE autres que la France dans la base de données.</li>
+                    <li>Analyse des commandes du client Pavbo, incluant les types de produits et catégories.</li>
+                    <li>Calcul de l'offre de produits suédois totalisant 3820,3312.</li>
+                    <li>Identification de 7 clients n'ayant pas passé de commande.</li>
+                    <li>Détection d'incohérences dans les données, notamment des erreurs de syntaxe et des doublons.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="mission2">
+            <h2>Mission 2: Exploitation de la BDD avec Interface Low Code</h2>
+            <div class="mission-summary">
+                <h3>Résumé de la Mission 2</h3>
+                <ul>
+                    <li>Analyse approfondie de la structure des tables et de leurs relations.</li>
+                    <li>Vérification de l'absence du fournisseur "Marie Delamare" dans la base de données.</li>
+                    <li>Identification de la fonction du contact fournisseur "Ma Maison" comme étant "Directeur Marketing".</li>
+                    <li>Analyse des produits d'Italie ou d'Allemagne vendus à 50€ ou moins.</li>
+                    <li>Identification des catégories de produits vendues par les fournisseurs singapouriens.</li>
+                    <li>Analyse des produits de type viande livrés à Paris.</li>
+                    <li>Confirmation du nombre de clients nantais (3).</li>
+                    <li>Étude de l'offre des produits suédois.</li>
+                    <li>Analyse des commandes du client Mikal Pavbo.</li>
+                    <li>Examen des dates de commande du client Max Deschamps.</li>
+                    <li>Calcul du prix moyen (33,54 €), minimum (2,08 €) et maximum (320,00 €) des produits.</li>
+                    <li>Identification de "Chef des ventes" comme fonction de contact fournisseur la plus représentée.</li>
+                    <li>Analyse du conditionnement des produits (carton, verre, bouteilles).</li>
+                    <li>Calcul du chiffre d'affaires total : 1 648 176,9236 €.</li>
+                    <li>Identification des clients n'ayant pas passé de commande (MORJU et MAKOU).</li>
+                    <li>Détermination des villes avec le plus de clients : Agen, Paris, Nantes, et Lille (3 clients chacune).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="mission3">
+            <h2>Mission 3: Analyse avec SQL</h2>
+            <div class="mission-summary">
+                <h3>Résumé de la Mission 3</h3>
+                <ul>
+                    <li>Utilisation de requêtes SQL avancées pour analyser les données de KDOU.</li>
+                    <li>Analyse des produits vendus à 50 EUR ou plus et leurs pays d'origine.</li>
+                    <li>Étude des ventes par catégorie, notamment pour les desserts (207 326,70 €).</li>
+                    <li>Identification des fournisseurs dont les produits n'ont jamais été commandés.</li>
+                    <li>Analyse du nombre de produits par pays fournisseur.</li>
+                    <li>Étude des produits allemands vendus à moins de 100 EUR.</li>
+                    <li>Recherche de fournisseurs vendant uniquement des boissons ou des desserts.</li>
+                    <li>Analyse des clients nantais et leurs commandes de produits allemands.</li>
+                    <li>Étude des clients n'ayant pas bénéficié de promotion de 25%.</li>
+                    <li>Analyse des produits ayant toujours été vendus avec une remise.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>L'analyse approfondie des données de KDOU a révélé plusieurs points importants :</p>
+            <ul>
+                <li>La structure de la base de données est complexe mais bien organisée, permettant des analyses détaillées.</li>
+                <li>Des incohérences dans les données ont été identifiées, notamment des erreurs de syntaxe et des doublons, nécessitant une attention particulière pour l'amélioration de la qualité des données.</li>
+                <li>L'entreprise a une clientèle diversifiée géographiquement, avec des concentrations notables dans certaines villes.</li>
+                <li>Les analyses de ventes et de produits offrent des opportunités pour optimiser l'offre et cibler les stratégies marketing.</li>
+                <li>L'utilisation de requêtes SQL avancées a permis d'extraire des informations précieuses pour la prise de décision commerciale.</li>
+            </ul>
+            <p>Ces insights peuvent aider KDOU à améliorer sa gestion des stocks, ses relations avec les fournisseurs, ses stratégies de tarification et ses campagnes marketing ciblées. Il est recommandé de continuer à nettoyer et standardiser les données pour des analyses futures plus précises.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Équipe d'Analyse KDOU. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
