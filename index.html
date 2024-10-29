@@ -1,55 +1,176 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapport d'Analyse KDOU - Accueil</title>
+    <title>Company Report 2024</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rapport d'Analyse KDOU</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="mission1.html">Mission 1</a></li>
-                <li><a href="mission2.html">Mission 2</a></li>
-                <li><a href="mission3.html">Mission 3</a></li>
-                <li><a href="conclusion.html">Conclusion</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-content">
+            <span class="company">ACME Corp</span>
+            <span class="date">Q1 2024</span>
+        </div>
+    </nav>
 
     <main>
-        <section id="presentation-groupe">
-            <h2>Présentation du Groupe</h2>
-            <ul>
-                <li>Membre 1 : CHOUAB Sofia</li>
-                <li>Membre 2 : MEREUM Sirine</li>
-                <li>Membre 3 : PARADIS Romeo</li>
-            </ul>
+        <!-- Page 1: Overview -->
+        <section class="page" id="overview">
+            <h1>Financial Overview</h1>
+            <p class="section-text">
+                In the first quarter of 2024, ACME Corporation has demonstrated remarkable resilience and growth across all key performance indicators. Our strategic initiatives have yielded substantial returns, particularly in emerging markets where our innovative solutions continue to gain traction. The following metrics underscore our strong market position and operational excellence.
+            </p>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <h3>Revenue</h3>
+                    <p class="amount">$12.5M</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Growth</h3>
+                    <p class="amount">+24%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>New Clients</h3>
+                    <p class="amount">847</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Satisfaction</h3>
+                    <p class="amount">98%</p>
+                </div>
+            </div>
+            <p class="section-text">
+                These results reflect our commitment to sustainable growth and customer-centric approach. The significant increase in new client acquisition, coupled with our industry-leading satisfaction rates, positions us favorably for continued expansion throughout the fiscal year. Our revenue growth of 24% exceeds industry averages by 15 percentage points, highlighting the effectiveness of our market penetration strategy.
+            </p>
         </section>
 
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Ce rapport présente l'analyse des données de l'entreprise KDOU, réalisée en trois missions distinctes. Notre objectif était d'explorer la structure de la base de données, d'exploiter ces données à l'aide d'une interface low code, et d'effectuer des analyses approfondies en utilisant le langage SQL.</p>
-            <p>Chaque mission a apporté des éclairages différents sur les opérations de KDOU, permettant une compréhension globale de ses activités, de sa clientèle, et de ses produits.</p>
+        <!-- Page 2: Market Analysis -->
+        <section class="page" id="market">
+            <h1>Market Analysis</h1>
+            <p class="section-text">
+                Our global market presence continues to strengthen, with notable gains across key regions. The following analysis demonstrates our market penetration and growth trajectories in primary operational territories. Particular attention should be paid to our exceptional performance in emerging markets, where strategic investments have yielded substantial returns.
+            </p>
+            <div class="data-table">
+                <div class="sql-placeholder">
+                    SELECT 
+                        sales_volume,
+                        revenue,
+                        customer_rating
+                    FROM product_metrics
+                    WHERE product_id = 'A'
+                    AND quarter = 1;
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Market Share</th>
+                            <th>Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>North America</td>
+                            <td>34%</td>
+                            <td>+12%</td>
+                        </tr>
+                        <tr>
+                            <td>Europe</td>
+                            <td>28%</td>
+                            <td>+15%</td>
+                        </tr>
+                        <tr>
+                            <td>Asia Pacific</td>
+                            <td>22%</td>
+                            <td>+28%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="section-text">
+                The Asia Pacific region deserves special mention, showing the highest growth rate at 28%. This exceptional performance can be attributed to our targeted expansion strategy and the successful launch of localized product variants. Our market share in North America remains dominant, providing a stable foundation for global operations while we aggressively pursue growth opportunities in emerging markets.
+            </p>
         </section>
 
-        <section id="structure-rapport">
-            <h2>Structure du Rapport</h2>
-            <p>Ce rapport est divisé en plusieurs sections :</p>
-            <ul>
-                <li><a href="mission1.html">Mission 1</a> : Étude de la structure des données</li>
-                <li><a href="mission2.html">Mission 2</a> : Exploitation de la base de données avec une interface low code</li>
-                <li><a href="mission3.html">Mission 3</a> : Analyse approfondie avec le langage SQL</li>
-                <li><a href="conclusion.html">Conclusion</a> : Synthèse des résultats et perspectives</li>
-            </ul>
+        <!-- Page 3: Product Performance -->
+        <section class="page" id="products">
+            <h1>Product Performance</h1>
+            <p class="section-text">
+                Our product portfolio demonstrates robust performance across all major categories. The introduction of next-generation features and enhanced user experience capabilities has driven significant adoption rates. Customer feedback continues to be overwhelmingly positive, particularly regarding our core product offerings.
+            </p>
+            <div class="sql-placeholder">
+                SELECT 
+                    sales_volume,
+                    revenue,
+                    customer_rating
+                FROM product_metrics
+                WHERE product_id = 'A'
+                AND quarter = 1;
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Product A</h3>
+                    <ul class="metrics">
+                        <li>Sales: 1.2M units</li>
+                        <li>Revenue: $4.8M</li>
+                        <li>Rating: 4.8/5</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <h3>Product B</h3>
+                    <ul class="metrics">
+                        <li>Sales: 0.8M units</li>
+                        <li>Revenue: $3.2M</li>
+                        <li>Rating: 4.6/5</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="section-text">
+                Product A continues to be our flagship offering, with exceptional performance in both enterprise and consumer segments. The recent feature additions have been particularly well-received, leading to a 40% increase in enterprise adoptions. Product B, while showing strong performance, is currently undergoing a significant upgrade cycle that is expected to drive increased market penetration in the coming quarters.
+            </p>
+        </section>
+
+        <!-- Page 4: Future Outlook -->
+        <section class="page" id="outlook">
+            <h1>Future Outlook</h1>
+            <p class="section-text">
+                Based on current market indicators and our strategic positioning, we project continued strong performance throughout 2024. Our innovation pipeline remains robust, with several key product launches scheduled for the upcoming quarters. Market expansion initiatives, particularly in emerging economies, are expected to drive significant growth.
+            </p>
+            <div class="forecast">
+                <div class="sql-placeholder">
+                    SELECT 
+                        quarter,
+                        projected_revenue,
+                        growth_forecast
+                    FROM forecasts
+                    WHERE year = 2024;
+                </div>
+                <div class="forecast-grid">
+                    <div class="forecast-card">
+                        <h3>Q2 2024</h3>
+                        <p class="forecast-value">$14.2M</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Q3 2024</h3>
+                        <p class="forecast-value">$15.8M</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Q4 2024</h3>
+                        <p class="forecast-value">$18.3M</p>
+                    </div>
+                </div>
+            </div>
+            <p class="section-text">
+                These projections are supported by our strong pipeline of enterprise contracts and anticipated market expansion. The steady quarter-over-quarter growth reflects both our conservative estimation approach and the underlying strength of our market position. Key growth drivers include the launch of our next-generation platform, expanded partnership networks, and increased penetration in high-growth markets.
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Équipe d'Analyse KDOU. Tous droits réservés.</p>
+        <div class="footer-content">
+            <p>Confidential Report • ACME Corporation</p>
+            <p>Generated on April 15, 1970</p>
+        </div>
     </footer>
 </body>
 </html>
