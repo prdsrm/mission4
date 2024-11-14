@@ -7,10 +7,10 @@
 
 /* Variables */
 :root {
-    --primary: #2D3436;
-    --secondary: #636E72;
-    --accent: #0984E3;
-    --background: #F5F6FA;
+    --primary: #283739;
+    --secondary: #2c5d63;
+    --accent: #a2c11c;
+    --background: #e0e0e0;
     --card: #FFFFFF;
     --spacing: 2rem;
     --border-radius: 12px;
@@ -47,12 +47,34 @@ nav {
     font-size: 1.2rem;
 }
 
-.mission {
-    background: var(--background);
-    border-radius: var(--border-radius);
-    margin: 1em;
-    padding: 1em;
-    width: 100%;
+#sidebar-active {
+    display: none;
+}
+
+.nav-content {
+    padding: 10px;
+}
+
+.nav-content > a:hover {
+    background-color: var(--accent);
+}
+
+.open-sidebar-button .close-sidebar-button {
+    display: none;
+    padding: 0px 20px;
+}
+
+/* Display the sidebar */
+@media (max-width: 650px) {
+    /* Hide the nav content when its less than 650px,
+    otherwise, it won't show */
+    .nav-content {
+        flex-direction: column;
+        align-items: flex-start;
+        top: 0;
+        right: 0;
+        background-color: var(--background);
+    }
 }
 
 /* Main Content */
@@ -111,7 +133,7 @@ h1 {
 /* SQL Placeholders */
 .sql-placeholder {
     background: #2D3436;
-    color: #74B9FF;
+    color: #a2c11c;
     padding: 1rem;
     border-radius: var(--border-radius);
     font-family: 'Courier New', Courier, monospace;

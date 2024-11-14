@@ -11,17 +11,60 @@
 <body>
     <header>
         <nav>
-            <div class="nav-content"></div>
-            <span class="company">KDOU International</span>
-            <a class="mission" href="#mission1">Mission 1</a>
-            <a class="mission" href="#mission2">Mission 2</a>
-            <a class="mission" href="#mission3">Mission 3</a>
-            <a class="mission" href="#conclusion">Conclusion</a>
+            <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
+            <input type="checkbox" id="sidebar-active">
+            <!-- SVG from: https://lucide.dev/icons/menu -->
+            <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
+            <!-- Navigation bar -->
+            <div class="nav-content">
+                <!-- SVG from: https://lucide.dev/icons/x -->
+                <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
+                <span class="company">KDOU International</span>
+                <a class="mission" href="#introduction">Introduction</a>
+                <a class="mission" href="#mission1">Mission 1</a>
+                <a class="mission" href="#mission2">Mission 2</a>
+                <a class="mission" href="#mission3">Mission 3</a>
+                <a class="mission" href="#conclusion">Conclusion</a>
             </div>
         </nav>
     </header>
 
     <main>
+        <section class="page" id="introduction">
+            <h1>Introduction</h1>
+            <p class="section-text">
+                In the first quarter of 2024, ACME Corporation has demonstrated remarkable resilience and growth across
+                all key performance indicators. Our strategic initiatives have yielded substantial returns, particularly
+                in emerging markets where our innovative solutions continue to gain traction. The following metrics
+                underscore our strong market position and operational excellence.
+            </p>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <h3>Revenue</h3>
+                    <p class="amount">$12.5M</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Growth</h3>
+                    <p class="amount">+24%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>New Clients</h3>
+                    <p class="amount">847</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Satisfaction</h3>
+                    <p class="amount">98%</p>
+                </div>
+            </div>
+            <p class="section-text">
+                These results reflect our commitment to sustainable growth and customer-centric approach. The
+                significant increase in new client acquisition, coupled with our industry-leading satisfaction rates,
+                positions us favorably for continued expansion throughout the fiscal year. Our revenue growth of 24%
+                exceeds industry averages by 15 percentage points, highlighting the effectiveness of our market
+                penetration strategy.
+            </p>
+        </section>
+
         <section class="page" id="mission1">
             <h1>Mission 1</h1>
             <p class="section-text">
