@@ -6,6 +6,7 @@
 }
 
 /* Variables */
+/* Color palette from: https://palettes.shecodes.io/palettes/1225 */
 :root {
     --primary: #283739;
     --secondary: #2c5d63;
@@ -69,6 +70,7 @@ nav {
     /* Hide the nav content when its less than 650px,
     otherwise, it won't show */
     .nav-content {
+        /* Show the element vertically */
         flex-direction: column;
         align-items: flex-start;
         top: 0;
