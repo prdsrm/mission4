@@ -1,76 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KDOU International - Conclusion</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
-            <input type="checkbox" id="sidebar-active">
-            <!-- SVG from: https://lucide.dev/icons/menu -->
-            <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
-            <!-- Navigation bar -->
-            <div class="nav-content">
-                <!-- SVG from: https://lucide.dev/icons/x -->
-                <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
-                <span class="company">KDOU International</span>
-                <a class="mission" href="index.html">Introduction</a>
-                <a class="mission" href="mission1.html">Mission 1</a>
-                <a class="mission" href="mission2.html">Mission 2</a>
-                <a class="mission" href="mission3.html">Mission 3</a>
-                <a class="mission" href="conclusion.html">Conclusion</a>
-            </div>
-        </nav>
+      <nav>
+        <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
+        <input type="checkbox" id="sidebar-active" />
+        <!-- SVG from: https://lucide.dev/icons/menu -->
+        <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
+        <!-- Navigation bar -->
+        <div class="nav-content">
+          <!-- SVG from: https://lucide.dev/icons/x -->
+          <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
+          <span class="company">KDOU International</span>
+          <a class="mission" href="index.html">Introduction</a>
+          <a class="mission" href="mission1.html">Mission 1</a>
+          <a class="mission" href="mission2.html">Mission 2</a>
+          <a class="mission" href="mission3.html">Mission 3</a>
+          <a class="mission" href="conclusion.html">Conclusion</a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="page">
-            <h1>Mission 1</h1>
-            <p class="section-text">
-                In the first quarter of 2024, ACME Corporation has demonstrated remarkable resilience and growth across
-                all key performance indicators. Our strategic initiatives have yielded substantial returns, particularly
-                in emerging markets where our innovative solutions continue to gain traction. The following metrics
-                underscore our strong market position and operational excellence.
-            </p>
-            <div class="stat-grid">
-                <div class="stat-card">
-                    <h3>Revenue</h3>
-                    <p class="amount">$12.5M</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Growth</h3>
-                    <p class="amount">+24%</p>
-                </div>
-                <div class="stat-card">
-                    <h3>New Clients</h3>
-                    <p class="amount">847</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Satisfaction</h3>
-                    <p class="amount">98%</p>
-                </div>
-            </div>
-            <p class="section-text">
-                These results reflect our commitment to sustainable growth and customer-centric approach. The
-                significant increase in new client acquisition, coupled with our industry-leading satisfaction rates,
-                positions us favorably for continued expansion throughout the fiscal year. Our revenue growth of 24%
-                exceeds industry averages by 15 percentage points, highlighting the effectiveness of our market
-                penetration strategy.
-            </p>
-        </section>
+      <section class="page">
+        <h1>Mission 1</h1>
+        <p class="section-text">
+          La première mission avait pour objectif d'analyser la structure de la
+          base de données KDou et de comprendre l'organisation de ses données.
+          Cette étape était fondamentale pour identifier les relations entre les
+          différentes tables et repérer d'éventuelles anomalies.
+        </p>
+
+        <h2>Bilan structuré de l'étude des données</h2>
+
+        <h3>1. Structure des tables</h3>
+        <p class="section-text">
+          La base de données KDou est composée de six tables principales,
+          chacune ayant un rôle spécifique dans l'organisation des données :
+        </p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Table</th>
+              <th>Clé Primaire</th>
+              <th>Clés Étrangères</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fournisseur</td>
+              <td>n° fournisseur</td>
+              <td>Aucune</td>
+              <td>Informations sur les fournisseurs</td>
+            </tr>
+            <tr>
+              <td>Produit</td>
+              <td>Réf produit</td>
+              <td>n° fournisseur, Code catégorie</td>
+              <td>Catalogue des produits</td>
+            </tr>
+            <tr>
+              <td>Catégorie</td>
+              <td>Code catégorie</td>
+              <td>Aucune</td>
+              <td>Classification des produits</td>
+            </tr>
+            <tr>
+              <td>Clientèle</td>
+              <td>Code client</td>
+              <td>Aucune</td>
+              <td>Base clients</td>
+            </tr>
+            <tr>
+              <td>Commande</td>
+              <td>n° Commande</td>
+              <td>Code client</td>
+              <td>Commandes passées</td>
+            </tr>
+            <tr>
+              <td>DetailCommande</td>
+              <td>Aucune</td>
+              <td>n° Commande, Réf produit</td>
+              <td>Détails des commandes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2. Relations et cardinalités</h3>
+        <p class="section-text">
+          Les relations entre les tables sont structurées de la manière suivante
+          :
+        </p>
+
+        <div class="sql-placeholder">
+          <pre class="sql-code">
+                    <code>
+        -- Exemple de création de la table Produit avec ses relations
+        CREATE TABLE Produit (
+            RefProd VARCHAR(10) PRIMARY KEY,
+            NoFour INT,
+            CodeCateg INT,
+            NomProd VARCHAR(50),
+            QteParUnite VARCHAR(30),
+            PrixUnit DECIMAL(10,2),
+            UniteStock INT,
+            FOREIGN KEY (NoFour) REFERENCES Fournisseur(NoFour),
+            FOREIGN KEY (CodeCateg) REFERENCES Categorie(CodeCateg)
+        );
+                    </code>
+                </pre>
+        </div>
+
+        <h3>3. Analyse des données</h3>
+        <p class="section-text">
+          Lors de notre analyse, nous avons identifié plusieurs points notables
+          :
+        </p>
+
+        <ul class="section-list section-text">
+          <li>Structure relationnelle cohérente</li>
+          <li>Identification unique des produits et fournisseurs</li>
+          <li>Traçabilité des commandes</li>
+        </ul>
+
+        <p class="section-text">Points d'amélioration :</p>
+
+        <ul class="section-list section-text">
+          <li>Absence de clé primaire dans la table DetailCommande</li>
+          <li>Incohérences dans les formats de données</li>
+          <li>Doublons dans certaines entrées géographiques</li>
+        </ul>
+
+        <h3>4. Exemple d'incohérences détectées</h3>
+        <div class="sql-placeholder">
+          <pre class="sql-code">
+                    <code>
+        -- Requête pour identifier les incohérences dans les pays
+        SELECT DISTINCT Pays 
+        FROM Fournisseur 
+        WHERE Pays LIKE '%Suède%' OR Pays LIKE '%Suede%'
+        ORDER BY Pays;
+                    </code>
+                </pre>
+        </div>
+        <p class="section-text">
+          Cette requête révèle que le même pays peut être écrit de différentes
+          manières ("Suède" et "Suede"), ce qui complique l'analyse des données.
+        </p>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>Report • KDOU International</p>
-        </div>
+      <div class="footer-content">
+        <p>Report • KDOU International</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

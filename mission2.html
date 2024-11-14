@@ -1,96 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KDOU International - Conclusion</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
-            <input type="checkbox" id="sidebar-active">
-            <!-- SVG from: https://lucide.dev/icons/menu -->
-            <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
-            <!-- Navigation bar -->
-            <div class="nav-content">
-                <!-- SVG from: https://lucide.dev/icons/x -->
-                <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
-                <span class="company">KDOU International</span>
-                <a class="mission" href="index.html">Introduction</a>
-                <a class="mission" href="mission1.html">Mission 1</a>
-                <a class="mission" href="mission2.html">Mission 2</a>
-                <a class="mission" href="mission3.html">Mission 3</a>
-                <a class="mission" href="conclusion.html">Conclusion</a>
-            </div>
-        </nav>
+      <nav>
+        <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
+        <input type="checkbox" id="sidebar-active" />
+        <!-- SVG from: https://lucide.dev/icons/menu -->
+        <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
+        <!-- Navigation bar -->
+        <div class="nav-content">
+          <!-- SVG from: https://lucide.dev/icons/x -->
+          <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
+          <span class="company">KDOU International</span>
+          <a class="mission" href="index.html">Introduction</a>
+          <a class="mission" href="mission1.html">Mission 1</a>
+          <a class="mission" href="mission2.html">Mission 2</a>
+          <a class="mission" href="mission3.html">Mission 3</a>
+          <a class="mission" href="conclusion.html">Conclusion</a>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <section class="page">
+        <h1>Mission 2</h1>
+        <p class="section-text">
+          Cette mission avait pour objectif d'exploiter la base de données KDou
+          via une interface low-code pour générer des indicateurs pertinents
+          pour l'entreprise. L'utilisation d'une interface low-code a permis une
+          analyse rapide et visuelle des données.
+        </p>
 
-<section class="page">
-    <h1>Mission 2</h1>
-    <p class="section-text">
-        Our global market presence continues to strengthen, with notable gains across key regions. The following
-        analysis demonstrates our market penetration and growth trajectories in primary operational territories.
-        Particular attention should be paid to our exceptional performance in emerging markets, where strategic
-        investments have yielded substantial returns.
-    </p>
-    <div class="data-table">
-        <div class="sql-placeholder">
-            SELECT
-            sales_volume,
-            revenue,
-            customer_rating
-            FROM product_metrics
-            WHERE product_id = 'A'
-            AND quarter = 1;
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Region</th>
-                    <th>Market Share</th>
-                    <th>Growth</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>North America</td>
-                    <td>34%</td>
-                    <td>+12%</td>
-                </tr>
-                <tr>
-                    <td>Europe</td>
-                    <td>28%</td>
-                    <td>+15%</td>
-                </tr>
-                <tr>
-                    <td>Asia Pacific</td>
-                    <td>22%</td>
-                    <td>+28%</td>
-                </tr>
-            </tbody>
+        <h2>Présentation des indicateurs clés</h2>
+
+        <h3>1. Répartition géographique des fournisseurs</h3>
+        <p class="section-text">
+          Énoncé et interprétation : Analyser la distribution des fournisseurs
+          par pays pour évaluer la diversité géographique de
+          l'approvisionnement.
+        </p>
+        <p class="section-text">Résultat :</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Pays</th>
+              <th>Nombre de fournisseurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Allemagne</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>États-Unis</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>France</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Royaume-Uni</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>Autres</td>
+              <td>19</td>
+            </tr>
+          </tbody>
         </table>
-    </div>
-    <p class="section-text">
-        The Asia Pacific region deserves special mention, showing the highest growth rate at 28%. This
-        exceptional performance can be attributed to our targeted expansion strategy and the successful launch
-        of localized product variants. Our market share in North America remains dominant, providing a stable
-        foundation for global operations while we aggressively pursue growth opportunities in emerging markets.
-    </p>
-</section>
 
-</main>
+        <div class="sql-placeholder">
+          <pre class="sql-code">
+            <code>
+-- Code SQL généré :
+SELECT Pays, COUNT(*) as nombre_fournisseurs
+FROM Fournisseur
+GROUP BY Pays
+ORDER BY nombre_fournisseurs DESC;
+            </code>
+        </pre>
+        </div>
 
-<footer>
-    <div class="footer-content">
+        <h3>2. Analyse du chiffre d'affaires par catégorie</h3>
+        <p class="section-text">
+          Énoncé et interprétation : Évaluer la performance de chaque catégorie
+          de produits pour identifier les plus rentables.
+        </p>
+        <p class="section-text">Résultat :</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Chiffre d'affaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Boissons</td>
+              <td>360 309,75 €</td>
+            </tr>
+            <tr>
+              <td>Produits laitiers</td>
+              <td>302 393,83 €</td>
+            </tr>
+            <tr>
+              <td>Desserts</td>
+              <td>207 326,70 €</td>
+            </tr>
+            <tr>
+              <td>Condiments</td>
+              <td>131 080,05 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
         <p>Report • KDOU International</p>
-    </div>
-</footer>
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>

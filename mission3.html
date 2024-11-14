@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KDOU International</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
-            <input type="checkbox" id="sidebar-active">
-            <!-- SVG from: https://lucide.dev/icons/menu -->
-            <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
-            <!-- Navigation bar -->
-            <div class="nav-content">
-                <!-- SVG from: https://lucide.dev/icons/x -->
-                <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
-                <span class="company">KDOU International</span>
-                <a class="mission" href="index.html">Introduction</a>
-                <a class="mission" href="mission1.html">Mission 1</a>
-                <a class="mission" href="mission2.html">Mission 2</a>
-                <a class="mission" href="mission3.html">Mission 3</a>
-                <a class="mission" href="conclusion.html">Conclusion</a>
-            </div>
-        </nav>
+      <nav>
+        <!-- Understood sidebar thanks to: https://www.youtube.com/watch?v=8eFeIFKAKHw -->
+        <input type="checkbox" id="sidebar-active" />
+        <!-- SVG from: https://lucide.dev/icons/menu -->
+        <!-- <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></label> -->
+        <!-- Navigation bar -->
+        <div class="nav-content">
+          <!-- SVG from: https://lucide.dev/icons/x -->
+          <!-- <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></label> -->
+          <span class="company">KDOU International</span>
+          <a class="mission" href="index.html">Introduction</a>
+          <a class="mission" href="mission1.html">Mission 1</a>
+          <a class="mission" href="mission2.html">Mission 2</a>
+          <a class="mission" href="mission3.html">Mission 3</a>
+          <a class="mission" href="conclusion.html">Conclusion</a>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <section class="page">
+        <h1>Mission 3</h1>
+        <p class="section-text">
+          Cette mission s'est concentrée sur l'analyse des données KDou à
+          travers des requêtes SQL complexes, organisées autour de quatre thèmes
+          principaux : desserts et boissons, l'offre KDou, provenance des
+          produits, et la clientèle.
+        </p>
 
-<section class="page">
-    <h1>Mission 3</h1>
-    <p class="section-text">
-        Our product portfolio demonstrates robust performance across all major categories. The introduction of
-        next-generation features and enhanced user experience capabilities has driven significant adoption
-        rates. Customer feedback continues to be overwhelmingly positive, particularly regarding our core
-        product offerings.
-    </p>
-    <div class="sql-placeholder">
-        SELECT
-        sales_volume,
-        revenue,
-        customer_rating
-        FROM product_metrics
-        WHERE product_id = 'A'
-        AND quarter = 1;
-    </div>
-    <div class="product-grid">
-        <div class="product-card">
-            <h3>Product A</h3>
-            <ul class="metrics">
-                <li>Sales: 1.2M units</li>
-                <li>Revenue: $4.8M</li>
-                <li>Rating: 4.8/5</li>
-            </ul>
+        <h2>1. Desserts et Boissons</h2>
+
+        <h3>Indicateur 1.1 : Analyse des ventes par catégorie</h3>
+        <p class="section-text">
+          Énoncé : Calculer le chiffre d'affaires total des desserts et boissons
+          avec indication du pourcentage de remise moyen.
+        </p>
+
+        <div class="sql-placeholder">
+          <pre class="sql-code">
+                    <code>
+        -- Code SQL pour analyser les ventes par catégorie
+        SELECT 
+            Categorie.NomCateg,
+            SUM(DetailCommande.QteCom * DetailCommande.PrixUnitCli) as CA_Total,
+            AVG(DetailCommande.Remise) * 100 as Remise_Moyenne
+        FROM ((Categorie
+        INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg)
+        INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd)
+        WHERE Categorie.CodeCateg IN (1, 3)
+        GROUP BY Categorie.CodeCateg, Categorie.NomCateg;
+                    </code>
+                </pre>
         </div>
-        <div class="product-card">
-            <h3>Product B</h3>
-            <ul class="metrics">
-                <li>Sales: 0.8M units</li>
-                <li>Revenue: $3.2M</li>
-                <li>Rating: 4.6/5</li>
-            </ul>
+
+        <p class="section-text">Résultat :</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>CA Total</th>
+              <th>Remise Moyenne</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Boissons</td>
+              <td>360 309,75 €</td>
+              <td>15.2%</td>
+            </tr>
+            <tr>
+              <td>Desserts</td>
+              <td>207 326,70 €</td>
+              <td>12.8%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Indicateur 1.2 : Analyse des prix boissons/desserts par pays</h3>
+
+        <div class="sql-placeholder">
+          <pre class="sql-code">
+                    <code>
+        -- Code SQL pour analyser les prix des boissons et desserts par pays
+        SELECT 
+            Fournisseur.Pays,
+            Categorie.NomCateg,
+            AVG(Produit.PrixUnit) as Prix_Moyen
+        FROM Produit
+        INNER JOIN Fournisseur ON Produit.NoFour = Fournisseur.NoFour
+        INNER JOIN Categorie ON Produit.CodeCateg = Categorie.CodeCateg
+        WHERE Categorie.CodeCateg IN (1, 3)
+        GROUP BY Fournisseur.Pays, Categorie.NomCateg;
+                    </code>
+                </pre>
         </div>
-    </div>
-    <p class="section-text">
-        Product A continues to be our flagship offering, with exceptional performance in both enterprise and
-        consumer segments. The recent feature additions have been particularly well-received, leading to a 40%
-        increase in enterprise adoptions. Product B, while showing strong performance, is currently undergoing a
-        significant upgrade cycle that is expected to drive increased market penetration in the coming quarters.
-    </p>
-</section>
+      </section>
+    </main>
 
-</main>
-
-<footer>
-    <div class="footer-content">
+    <footer>
+      <div class="footer-content">
         <p>Report • KDOU International</p>
-    </div>
-</footer>
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
