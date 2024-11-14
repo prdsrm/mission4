@@ -46,22 +46,12 @@
           avec indication du pourcentage de remise moyen.
         </p>
 
-        <div class="sql-placeholder">
-          <pre class="sql-code">
-                    <code>
-        -- Code SQL pour analyser les ventes par catégorie
-        SELECT 
-            Categorie.NomCateg,
-            SUM(DetailCommande.QteCom * DetailCommande.PrixUnitCli) as CA_Total,
-            AVG(DetailCommande.Remise) * 100 as Remise_Moyenne
-        FROM ((Categorie
-        INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg)
-        INNER JOIN DetailCommande ON Produit.RefProd = DetailCommande.RefProd)
-        WHERE Categorie.CodeCateg IN (1, 3)
-        GROUP BY Categorie.CodeCateg, Categorie.NomCateg;
-                    </code>
-                </pre>
-        </div>
+        <!-- We need to show we can use images -->
+        <img
+          class="indicator-img"
+          src="assets/img/indicator1-1.png"
+          alt="Indicator 1.1"
+        />
 
         <p class="section-text">Résultat :</p>
 

@@ -279,3 +279,8 @@ footer {
     max-width: none;
   }
 }
+
+.indicator-img {
+  width: 100%;
+  height: auto;
+}
